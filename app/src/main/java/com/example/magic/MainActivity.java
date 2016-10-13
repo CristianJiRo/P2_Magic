@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -149,6 +150,6 @@ public class MainActivity extends AppCompatActivity {
         p1Veneno=0;
         p2Veneno=0;
         actualizar();
-
+        Snackbar.make(findViewById(android.R.id.content), "Contadores reiniciados", Snackbar.LENGTH_LONG).show();
     }
 }
