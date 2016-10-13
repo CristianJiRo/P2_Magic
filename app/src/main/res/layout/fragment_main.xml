@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.magic.MainActivityFragment"
+    tools:showIn="@layout/activity_main">
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="232dp"
+        tools:layout_editor_absoluteX="0dp"
+        app:layout_constraintGuide_percent="0.50989014" />
+
+    <Button
+        android:text="P-"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/p1Pmenos"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        android:onClick="decrementarP1V"
+        android:textColor="#088A29"
+        />
+
+
+    <Button
+        android:text="P+"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/p2Pmas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:onClick="incrementarP2V"
+        android:textColor="#088A29"
+        />
+
+    <Button
+        android:text="P-"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/p2Pmenos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        android:onClick="decrementarP2V"
+        android:textColor="#088A29"
+        />
+
+    <TextView
+        android:text="20/0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/p1Contador"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/p2P1"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintRight_toLeftOf="@+id/p1Lmenos"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/p1Lmas"
+        android:layout_marginLeft="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
+
+    <TextView
+        android:text="20/0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/p2Contador"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/p1P2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintRight_toLeftOf="@+id/p2Lmenos"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/p2Lmas"
+        android:layout_marginLeft="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
+
+    <Button
+        android:text="P+"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/p1Pmas"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:onClick="incrementarP1V"
+        android:textColor="#088A29"
+        />
+
+    <ImageButton
+        app:srcCompat="@android:drawable/arrow_up_float"
+        android:layout_height="wrap_content"
+        android:id="@+id/p2P1"
+        android:layout_width="0dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        android:onClick="transferirP1"
+        android:tint="#DF0101" />
+
+    <ImageButton
+        app:srcCompat="@android:drawable/arrow_down_float"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/p1P2"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/p2P1"
+
+        android:onClick="transferirP2"
+        android:tint="#DF0101" />
+
+    <ImageButton
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/p1Lmas"
+        app:layout_constraintBottom_toTopOf="@+id/p2P1"
+        app:layout_constraintLeft_toLeftOf="@+id/p1Pmas"
+        app:layout_constraintTop_toBottomOf="@+id/p1Pmas"
+        android:onClick="incrementarP1"
+        app:layout_constraintRight_toRightOf="@+id/p1Pmas"
+        app:srcCompat="@drawable/fhm" />
+
+    <ImageButton
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/p2Lmas"
+        app:layout_constraintBottom_toTopOf="@+id/p2Pmas"
+        app:layout_constraintLeft_toLeftOf="@+id/p2Pmas"
+        app:layout_constraintTop_toBottomOf="@+id/p1P2"
+        android:onClick="incrementarP2"
+        app:srcCompat="@drawable/fhm"
+        app:layout_constraintRight_toRightOf="@+id/p2Pmas" />
+
+    <ImageButton
+
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/p1Lmenos"
+        app:layout_constraintTop_toBottomOf="@+id/p1Pmenos"
+        app:layout_constraintRight_toRightOf="@+id/p1Pmenos"
+        app:layout_constraintBottom_toTopOf="@+id/p2P1"
+        android:onClick="decrementarP1"
+        app:layout_constraintLeft_toLeftOf="@+id/p1Pmenos"
+        app:srcCompat="@drawable/ehm" />
+
+    <ImageButton
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/p2Lmenos"
+        app:layout_constraintRight_toRightOf="@+id/p2Pmenos"
+        app:layout_constraintBottom_toTopOf="@+id/p2Pmenos"
+        app:layout_constraintTop_toBottomOf="@+id/p1P2"
+        app:layout_constraintVertical_bias="0.0"
+        android:onClick="decrementarP2"
+        app:srcCompat="@drawable/ehm"
+        app:layout_constraintLeft_toLeftOf="@+id/p2Pmenos"
+        app:layout_constraintHorizontal_bias="1.0" />
+
+
+</android.support.constraint.ConstraintLayout>
