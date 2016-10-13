@@ -12,11 +12,10 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    public int p1Vida;
-    public int p2Vida;
-
-    public int p1Veneno;
-    public int p2Veneno;
+    public int p1Vida=20;
+    public int p2Vida=20;
+    public int p1Veneno=0;
+    public int p2Veneno=0;
 
 
     @Override
@@ -25,13 +24,28 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        actualizar();
 
-
-        p1Vida=20;
-        p2Vida=20;
-        p1Veneno=0;
-        p2Veneno=0;
     }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState){
+        super.onSaveInstanceState(outState);
+        outState.putInt("p1VidaS", p1Vida);
+        outState.putInt("p2VidaS", p2Vida);
+        outState.putInt("p1VenenoS", p1Veneno);
+        outState.putInt("p2VenenoS", p2Veneno);
+    }
+
+    protected void onRestoreInstanceState(Bundle savedInstanceState){
+        super.onRestoreInstanceState(savedInstanceState);
+        p1Vida = savedInstanceState.getInt("p1VidaS");
+        p2Vida = savedInstanceState.getInt("p2VidaS");
+        p1Veneno = savedInstanceState.getInt("p1VenenoS");
+        p2Veneno = savedInstanceState.getInt("p2VenenoS");
+        actualizar();
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -189,8 +203,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void actualizarA (){
 
-        TextView player1A = (TextView) findViewById(R.id.p1ContadorA);
-        TextView player2A = (TextView) findViewById(R.id.p2ContadorA);
+        TextView player1A = (TextView) findViewById(R.id.p1Contador);
+        TextView player2A = (TextView) findViewById(R.id.p2Contador);
 
         player1A.setText(p1Vida + "/" + p1Veneno);
         player2A.setText(p2Vida + "/" + p2Veneno);
