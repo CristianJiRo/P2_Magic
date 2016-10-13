@@ -141,76 +141,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void incrementarP1VA (View vista){
-
-        p1Veneno++;
-        actualizarA();
-    }
-    public void incrementarP1A (View vista){
-
-        p1Vida++;
-        actualizarA();
-    }
-
-    public void incrementarP2A (View vista){
-
-        p2Vida++;
-        actualizarA();
-    }
-    public void incrementarP2VA (View vista){
-
-        p2Veneno++;
-        actualizarA();
-    }
-
-    public void transferirP1A (View vista){
-
-        p1Vida++;
-        p2Vida--;
-        actualizarA();
-    }
-
-    public void transferirP2A (View vista){
-
-        p1Vida--;
-        p2Vida++;
-        actualizarA();
-
-    }
-
-    public void decrementarP1VA (View vista){
-
-        p1Veneno--;
-        actualizarA();
-    }
-    public void decrementarP1A (View vista){
-
-        p1Vida--;
-        actualizarA();
-    }
-
-    public void decrementarP2A (View vista){
-
-        p2Vida--;
-        actualizarA();
-    }
-    public void decrementarP2VA (View vista){
-
-        p2Veneno--;
-        actualizarA();
-    }
-
-
-    public void actualizarA (){
-
-        TextView player1A = (TextView) findViewById(R.id.p1Contador);
-        TextView player2A = (TextView) findViewById(R.id.p2Contador);
-
-        player1A.setText(p1Vida + "/" + p1Veneno);
-        player2A.setText(p2Vida + "/" + p2Veneno);
-
-    }
-
     public void reiniciar (View vista){
 
         p1Vida=20;
@@ -220,5 +150,4 @@ public class MainActivity extends AppCompatActivity {
         actualizar();
 
     }
-
 }
