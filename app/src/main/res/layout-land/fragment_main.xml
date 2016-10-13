@@ -42,7 +42,7 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:textColor="#088A29"
-            android:onClick="incrementarP2" />
+            android:onClick="incrementarP2V" />
     </LinearLayout>
 
     <LinearLayout

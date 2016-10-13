@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            reiniciar();
             return true;
         }
 
@@ -141,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void reiniciar (View vista){
+    public void reiniciar (){
 
         p1Vida=20;
         p2Vida=20;
